@@ -1,0 +1,1 @@
+A pasta contem o progeto da página home, do sistema de multimeios. A pagina agora está responsiva
