@@ -1,1 +1,4 @@
-A pasta contem o progeto da página home, do sistema de multimeios. A pagina agora está responsiva
+A pasta contem o progeto da página home, do sistema de multimeios.
+A pagina agora está responsiva.
+Este documento também servirá para manter o projeto com suas notas de atualização.
+Versão atual: 0.1
