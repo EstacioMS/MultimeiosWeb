@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.conteudo-centralizado{
+	width: 35%;
+	margin: 0 auto;
+}
+
+.form-professor{
+	border-top: 3px solid rgba(146,191,214,1);
+	background-color: rgb(215,221,221);
+	border-radius: 10px;
+}
+.esqueceu-senha{
+	text-align: center;
+	display: block;
+	color: gray;
+}
+.sem-espacamento{
+	padding: 0px;
+}
+
+.borda-bottom{
+	border-bottom: 2px solid white;
+}
+
+.grupo-personalizado{
+	margin: 0px;
+	padding: 20px 10px; 
+}
+body {
+	background-image: url('./imagens/fundo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+.botao-login{
+	background-color: rgb(91, 192, 220);
+	color: #fff;
+	padding: 6px 0px;
+	border-radius: 10px;
+	border: 1px solid rgb(154, 187, 196);
+	
+}	
+@media (max-width: 1200px) { 
+	
+}
+
+@media (max-width: 992px) {
+	.conteudo-centralizado{
+		width: 40%;
+	}
+}
+@media (max-width: 768px) {
+	.conteudo-centralizado{
+		width: 50%;
+	}
+}
+@media (max-width: 576px) { 
+	.conteudo-centralizado{
+		width: 80%;
+	}
+}
+
+
+
+
+
