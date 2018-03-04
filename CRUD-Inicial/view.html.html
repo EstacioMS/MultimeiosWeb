@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>CRUD</title>
+
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!--Precisa ser implementado um codigo em javascript para o botão "Sim" poder realizar a exclusão-->
+    <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+      </div>
+      <div class="modal-body">
+        Deseja realmente excluir este item?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Sim</button>
+ <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+ <div class="container-fluid">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   <a class="navbar-brand" href="#">Multi-meios Estácio</a>
+  </div>
+  <div id="navbar" class="navbar-collapse collapse">
+   <ul class="nav navbar-nav navbar-right">
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Opções</a></li>
+    <li><a href="#">Perfil</a></li>
+    <li><a href="#">Ajuda</a></li>
+   </ul>
+  </div>
+ </div>
+</nav>
+    
+<div id="main" class="container-fluid">
+ <h3 class="page-header">Cadastro para reserva de Multimeios #01</h3>
+<div class="row">
+<div class="col-md-4">
+    <p><strong>Selecione uma data</strong></p>
+<!--A marcação "{Valor do Campo}" devera ser posteriormente ser adicionada com uma base de dados via backend-->
+    <p>{Valor do Campo}</p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Selecione um horario</strong></p>
+<!--A marcação "{Valor do Campo}" devera ser posteriormente ser adicionada com uma base de dados via backend-->
+    <p>{Valor do Campo}</p>
+  </div>
+  <div class="col-md-4">
+    <p><strong>Selecione um equipamento</strong></p>
+<!--A marcação "{Valor do Campo}" devera ser posteriormente ser adicionada com uma base de dados via backend-->
+    <p>{Valor do Campo}</p>
+</div>
+</div>
+</div>
+    
+    <hr />
+<div id="actions" class="row">
+ <div class="col-md-12">
+  <a href="edit.html" class="btn btn-primary">Editar</a>
+  <a href="index.html" class="btn btn-default">Fechar</a>
+  <a href="#" class="btn btn-default" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+ </div>
+</div>
+ 
+    <script src="js/jquery.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
