@@ -1,0 +1,19 @@
+.icone{
+	color: #343a40;
+	padding: 0 15px;
+	font-size: 20px;
+}
+
+.icone-editar:hover{
+	color: #007bff;
+	transform: scale(1.2);
+}
+
+.icone-excluir:hover{
+	color: #dc3545;
+	transform: scale(1.2);
+}
+
+.conteudo-btn-cadastro{
+	margin-bottom: 16px;
+}

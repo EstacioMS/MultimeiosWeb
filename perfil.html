@@ -14,6 +14,9 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/multimeios.css" rel="stylesheet">
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -37,6 +40,12 @@
             <span class="nav-link-text">Agendamentos</span>
           </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="perfil.html">
+            <i class="fa fa-users"></i>
+            <span class="nav-link-text">Gerenciar Perfis</span>
+          </a>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
           <a class="nav-link" href="tables.html">
             <i class="fa fa-envelope-o meu-icone"></i>
@@ -55,9 +64,54 @@
         </li>
         <li class="breadcrumb-item active">Gerência Perfis</li>
       </ol>
+      <div class="row conteudo-btn-cadastro">
+      	<div class="col-12">
+      		<button class="btn btn-dark pull-right btn-lg btn-estacio" data-toggle="modal" data-target="#CadastroPerfilModal">Novo Perfil</button>	
+      	</div>
+      </div>
       <div class="row">
-      	<button class="btn btn-dark"></button>
         <div class="col-12">
+        	<table class="table table-hover">
+        		<thead class="thead-light">
+        			<th>Nome</th>
+        			<th class="text-center"> # </th>
+        		</thead>
+        		<tbody>
+        			<tr>
+        				<td>Gerente</td>
+        				<td class="text-center">
+        					<a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+        						<i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
+        					</a>
+        					<a href="" class="" title="Excluir">
+        						<i class="fa fa-trash fa-2 icone icone-excluir" aria-hidden="true"></i>
+        					</a>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>Administrativo</td>
+        				<td class="text-center">
+        					<a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+        						<i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
+        					</a>
+        					<a href="" class="" title="Excluir">
+        						<i class="fa fa-trash fa-2 icone icone-excluir" aria-hidden="true"></i>
+        					</a>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>Professor</td>
+        				<td class="text-center">
+        					<a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+        						<i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
+        					</a>
+        					<a href="" class="" title="Excluir">
+        						<i class="fa fa-trash fa-2 icone icone-excluir" aria-hidden="true"></i>
+        					</a>
+        				</td>
+        			</tr>
+        		</tbody>
+        	</table>
         </div>
       </div>
     </div>
@@ -74,24 +128,79 @@
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>
-    <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+    <!-- Modal -->
+	<div class="modal fade" id="CadastroPerfilModal" tabindex="-1" role="dialog" aria-labelledby="cadastroPerfilModal" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="cadastroPerfilModal">Cadastro de Perfil</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      	<form method="GET" action="perfil.php">
+		      <div class="modal-body">
+		      	<div class="row">
+		      		<div class="col-12">
+		      			<div class="form-group">
+		      				<label for="nome-perfil">Nome</label>
+		      				<input type="text" name="nome-perfil" id="nome-perfil" class="form-control"	placeholder="Digite o nome do perfil (Ex: Usuário, Administrador.)">
+		      			</div>
+		      		</div>
+		      	</div>
+		        	
+
+		      
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+		        <button type="submit" class="btn btn-primary">Salvar</button>
+		      </div>
+		    </form>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="AlteracaoPerfilModal" tabindex="-1" role="dialog" aria-labelledby="alteracaoPerfilModal" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="alteracaoPerfilModal">Alteração de Perfil</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      	<form method="GET" action="perfil.php">
+		      <div class="modal-body">
+		      	<div class="row">
+		      		<div class="col-12">
+		      			<div class="form-group">
+		      				<label for="nome-perfil">Nome</label>
+		      				<input type="text" value="Administrador" name="nome-perfil" id="nome-perfil" class="form-control"	placeholder="Digite o nome do perfil (Ex: Usuário, Administrador.)">
+		      			</div>
+		      		</div>
+		      	</div>
+		        	
+
+		      
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+		        <button type="submit" class="btn btn-primary">Salvar</button>
+		      </div>
+		    </form>
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+
+    
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
