@@ -84,6 +84,65 @@
     </a>
 
 
+</div><br>
+    <table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Quantidade Agendada</th>
+      <th scope="col">Dias de Agendamento</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <th scope="row"><i class="fa fa-play-circle fa-2x icone-datashow" aria-hidden="true"></i></th>
+      <td>DataShow</td>
+      <td>1</td>
+      <td>Seg</td>
+      <td class="text-center">
+                  <a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+                    <i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
+                  </a>
+                  <a href="" class="" title="Excluir">
+                    <i class="fa fa-trash fa-2 icone icone-excluir" aria-hidden="true"></i>
+                  </a>
+                </td>
+    </tr>
+    <tr>
+      <th scope="row"><i class="fa fa-home fa-2x icone-lab" aria-hidden="true"></i></th>
+      <td>Laboratório</td>
+      <td>1</td>
+      <td>Qui</td>
+      <td class="text-center">
+                  <a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+                    <i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
+                  </a>
+                  <a href="" class="" title="Excluir">
+                    <i class="fa fa-trash fa-2 icone icone-excluir" aria-hidden="true"></i>
+                  </a>
+                </td>
+    </tr>
+    <tr>
+      <th scope="row"><i class="fa fa-camera fa-2x icone-camera" aria-hidden="true"></i></th>
+      <td>Câmera fotografica</td>
+      <td>2</td>
+      <td>Ter</td>
+      <td class="text-center">
+                  <a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+                    <i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
+                  </a>
+                  <a href="" class="" title="Excluir">
+                    <i class="fa fa-trash fa-2 icone icone-excluir" aria-hidden="true"></i>
+                  </a>
+                </td>
+    </tr>
+  </tbody>
+</table>
+
+
     <!-- Modal -->
 
 	<div class="modal fade" id="CadastroPerfilModal" tabindex="-1" role="dialog" aria-labelledby="cadastroPerfilModal" aria-hidden="true">
@@ -102,12 +161,12 @@
           </button>
 
 	      </div>
-	      	<form method="GET" action="perfil.php">
+	      	<form method="GET" action="tipoMultimeio.php">
 		      <div class="modal-body">
 		      	<div class="row">
 		      		<div class="col-12">
 		      			<div class="form-group">
-		      				<label for="nome-perfil">Nome</label>
+		      				<label for="tipo-multimeio">Nome</label>
                   <div>
                   </div>
 		      				<input type="text" name="nome-tipomultimeios" id="nome-tipomultimeios" class="form-control"	placeholder="Digite o tipo do multimeio (Ex: DataShow, Laboratório ...)">
@@ -119,7 +178,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
-                  <label class="campusAtual-multimeios" for="cadastroMultimeiosModal">Quantidade de Agendamento por Usuario</label><br>
+                  <label class="quantidade-multimeios" for="quantidade-multimeios">Quantidade de Agendamento por Usuario</label>
                    <select>
  <option>01</option>
  <option>02</option>
@@ -131,29 +190,54 @@
  <option>08</option>
  <option>09</option>
  <option>10</option>
-   </div>
+  </div>
  </select>
+ 
 
- </div>
-          <form method="GET" action="perfil.php">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-12">
-                <div class="form-group">
-                  <label for="dia-disponivel">Dia disponivel para Agendamento</label>
-                  <div>
-                  <div>
-                  Seg        <input type="checkbox" name="dia-semana" id="dia-semana" value="Seg">
-                  Ter        <input type="checkbox" nome="dia-semana" id = "dia-semana" value="Ter">
-                  Quar       <input type="checkbox" nome="dia-semana" id = "dia-semana" value="Quar">
-                  Quin       <input type="checkbox" nome="dia-semana" id = "dia-semana" value="Quin">
-                  Sex        <input type="checkbox" nome="dia-semana" id = "dia-semana" value="Sex">
-                  Sab        <input type="checkbox" nome="dia-semana" id = "dia-semana" value="Sab">
-                  Dom        <input type="checkbox" nome="dia-semana" id = "dia-semana" value="Dom">
 
-                
-                </div>
-        
+ </div>   
+ <label class="dia-multimeios" for="dia-multimeios">Dias de Agendamento</label>
+</div>
+</div>
+ <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">Seg</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2">Ter</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Qua</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Qui</label>
+</div>
+
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Sex</label>
+</div>
+
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Sab</label>
+</div>
+
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Dom</label>
+</div>       
+
+</div>       
+
+</div>              
+
 
 
 		      </div>
