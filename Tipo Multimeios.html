@@ -68,23 +68,8 @@
       	<div class="col-12">
       		<button class="btn btn-dark pull-right btn-lg btn-estacio" data-toggle="modal" data-target="#CadastroPerfilModal">Novo Multimeio</button>	
       	</div>
-      
-    <!-- /.container-fluid-->
-    <!-- /.content-wrapper-->
-    <footer class="sticky-footer">
-      <div class="container">
-        <div class="text-center">
-          <small>Copyright © Your Website 2018</small>
-        </div>
-      </div>
-    </footer>
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
 
-
-</div><br>
+        </div><br>
     <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
@@ -103,7 +88,7 @@
       <td>1</td>
       <td>Seg</td>
       <td class="text-center">
-                  <a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+                  <a data-toggle="modal" data-target="#AlteracaoTipoModal" title="Editar">
                     <i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
                   </a>
                   <a href="" class="" title="Excluir">
@@ -117,7 +102,7 @@
       <td>1</td>
       <td>Qui</td>
       <td class="text-center">
-                  <a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+                  <a data-toggle="modal" data-target="#AlteracaoTipoModal" title="Editar">
                     <i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
                   </a>
                   <a href="" class="" title="Excluir">
@@ -131,7 +116,7 @@
       <td>2</td>
       <td>Ter</td>
       <td class="text-center">
-                  <a data-toggle="modal" data-target="#AlteracaoPerfilModal" title="Editar">
+                  <a data-toggle="modal" data-target="#AlteracaoTipoModal" title="Editar">
                     <i class="fa fa-pencil-square-o fa-2 icone icone-editar" aria-hidden="true"></i>
                   </a>
                   <a href="" class="" title="Excluir">
@@ -141,6 +126,24 @@
     </tr>
   </tbody>
 </table>
+
+
+
+      
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © Your Website 2018</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
 
 
     <!-- Modal -->
@@ -153,14 +156,10 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 
 <div>
-
-
-
 </div>
-	          <span aria-hidden="true">&times;</span>
+<span aria-hidden="true">&times;</span>
           </button>
-
-	      </div>
+	     </div>
 	      	<form method="GET" action="tipoMultimeio.php">
 		      <div class="modal-body">
 		      	<div class="row">
@@ -233,14 +232,9 @@
   <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
   <label class="form-check-label" for="inlineCheckbox3">Dom</label>
 </div>       
-
 </div>       
-
 </div>              
-
-
-
-		      </div>
+</div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
 		        <button type="submit" class="btn btn-primary">Salvar</button>
@@ -250,7 +244,96 @@
     </div>
   </div>
 
-    
+
+<!-- Modal -->
+  <div class="modal fade" id="AlteracaoTipoModal" tabindex="-1" role="dialog" aria-labelledby="alteracaoTipoModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="alteracaoTipoModal">Alteração Tipo Multimeio</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+          <form method="GET" action="TipoMultimeio.php">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="nome-tipomultimeios">Nome</label>
+                  <input type="text" value="DataShow" name="nome-tipomultimeios" id="nome-tipomultimeios" class="form-control" placeholder="Digite o tipo do multimeio (Ex: Camera, DataShow .)">
+              </div>
+                 </div>
+    <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="quantidade-multimeios" for="quantidade-multimeios">Quantidade de Agendamento por Usuario</label>
+                   <select>
+ <option>01</option>
+ <option selected>02</option>
+ <option>03</option>
+ <option>04</option>
+ <option>05</option>
+ <option>06</option>
+ <option>07</option>
+ <option>08</option>
+ <option>09</option>
+ <option>10</option>
+  
+ </select>
+
+
+</div>
+ <label class="dia-multimeios" for="dia-multimeios">Dias de Agendamento</label>
+</div>
+</div>
+ <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1">Seg</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
+  <label class="form-check-label" for="inlineCheckbox2">Ter</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Qua</label>
+</div>
+
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Qui</label>
+</div>
+
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Sex</label>
+</div>
+
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+  <label class="form-check-label" for="inlineCheckbox3">Sab</label>
+</div>
+
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" checked>
+  <label class="form-check-label" for="inlineCheckbox3">Dom</label>
+</div>
+ 
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
