@@ -74,7 +74,7 @@
       </ol>
       <div class="row conteudo-btn-cadastro">
       	<div class="col-12">
-      		<button class="btn btn-dark pull-right btn-lg btn-estacio" data-toggle="modal" data-target="#CadastroPerfilModal">Novo Item</button>	
+      		<button class="btn btn-dark pull-right btn-lg btn-estacio" data-toggle="modal" data-target="#CadastroPerfilModal">Novo Campus</button>	
       	</div>
       </div>
 
@@ -83,7 +83,7 @@
         <div class="col-12">
         	<table class="table table-hover" >
         		<thead class="thead-light">
-        			<th>Código</th>
+        			<th>ID</th>
               <th>Campus</th>
         			<th class="text-center">#</th>
         		</thead>
@@ -159,7 +159,7 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="cadastroPerfilModal">Cadastro de Item</h5>
+	        <h5 class="modal-title" id="cadastroPerfilModal">Cadastro de Campus</h5>
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	          <span aria-hidden="true">&times;</span>
 	        </button>
@@ -169,18 +169,20 @@
 		      	<div class="row">
 		      		<div class="col-12">
 		      			<div class="form-group">
-		      				<label for="nome-item">Item</label>
-		      				<input type="text" name="nome-item" id="nome-item" class="form-control"	placeholder="Digite o nome do item desejado (Ex: Sala, Projetor.)">	
-		      			</div>
+                  <label for="nome-item">Campus</label>
+                  <input type="text" name="nome-campus" id="nome-campus" class="form-control" placeholder="Digite o nome do campus (Ex: TV Morena)"> 
+                </div>                
 		      		</div>
 		      	</div>
+
+      <!-- chamar form: id="formId" -->
 		        	
 
 		      
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-		        <button type="submit" class="btn btn-primary">Salvar</button>
+		        <button type="submit" class="btn btn-primary" id="submit">Salvar</button>
 		      </div>
 		    </form>
 	    </div>
@@ -202,7 +204,7 @@
 		      	<div class="row">
 		      		<div class="col-12">
 		      			<div class="form-group">
-		      				<label for="nome-perfil">Nome do Item</label>
+		      				<label for="nome-perfil">Nome do Campus</label>
 		      				<input type="text" name="nome-item" id="nome-item" class="form-control"	placeholder="Digite o nome do item que deseja alterar (Ex: Projetor, Sala.)">
 		      			</div>
 		      		</div>
@@ -213,7 +215,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-		        <button type="submit" class="btn btn-primary">Salvar</button>
+		        <button type="submit" class="btn btn-primary" id="submit">Salvar</button>
 		      </div>
 		    </form>
 	    </div>
@@ -236,7 +238,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary">Não</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Sim</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="submit">Sim</button>
       </div>
     </div>
   </div>
@@ -253,6 +255,7 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
     <script type="text/javascript" src="js/campus.js"></script>
+    <script type="text/javascript" src="js/campus-modal.js"></script>
   </div>
 </body>
 
